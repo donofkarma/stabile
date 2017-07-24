@@ -1,0 +1,63 @@
+// containers
+.container-fluid {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $wideScreen;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: flex-start;
+    margin-right: $grid-gutter-width/-2;
+    margin-left: $grid-gutter-width/-2;
+
+    // no left and right spacing
+    &--no-gutter {
+        margin-right: 0;
+        margin-left: 0;
+
+        > .col {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    // no spacing at all
+    &--flush-cols {
+        margin-right: 0;
+        margin-left: 0;
+
+        > .col {
+            padding: 0;
+        }
+    }
+
+    // verically align children
+    &--align-middle {
+        align-items: center;
+    }
+}
+
+.col {
+    padding: $grid-gutter-width/2;
+}
+
+// create grid columns
+@include create-columns($column-group: 'xs');
+@include mq($from: small) {
+    @include create-columns($column-group: 'sm');
+}
+@include mq($from: medium) {
+    @include create-columns($column-group: 'md');
+}
+@include mq($from: large) {
+    @include create-columns($column-group: 'lg');
+}
+@include mq($from: wide) {
+    @include create-columns($column-group: 'wi');
+}

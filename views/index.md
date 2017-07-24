@@ -1,3 +1,8 @@
+---
+layout: default
+page: home
+---
+
 # Stabile
 
 A static site site generator powered by Jekyll.
@@ -8,7 +13,7 @@ A static site site generator powered by Jekyll.
 To use this generator you will need [Node.js](http://nodejs.org/download/) (min v6.10.x) and [Ruby](https://www.ruby-lang.org/en/).
 
 ```
-bundle install && npm run start
+bundle install && (npm|yarn) install
 ```
 
 ## Writing code
@@ -16,9 +21,6 @@ bundle install && npm run start
 ```
 npm run start
 ```
-
-The local site will be available at [http://localhost:4000/](http://localhost:4000/)
-
 
 ## Bundling for deployment
 

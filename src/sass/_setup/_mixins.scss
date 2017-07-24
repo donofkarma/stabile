@@ -1,0 +1,147 @@
+/* Grid */
+@mixin create-columns($column-group) {
+    @for $i from 1 through $grid-columns {
+        .col-#{$column-group}-#{$i} {
+            // -webkit-flex: 0 1 #{(100% / $grid-columns) * $i};
+            // flex: 0 1 #{(100% / $grid-columns) * $i};
+
+            // IE11 workaround for box-sizing
+            // https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+            -webkit-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: #{(100% / $grid-columns) * $i};
+        }
+
+        .col-offset-#{$column-group}-#{$i} {
+            margin-left: #{(100% / $grid-columns) * $i};
+        }
+    }
+}
+
+
+/* Font face */
+@mixin font-face($name, $filename) {
+    @font-face {
+        font-family: $name;
+        src: url('/assets/fonts/#{$filename}.woff2') format('woff2'),
+             url('/assets/fonts/#{$filename}.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+
+/* Float container collapse fix */
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+/* Reset lists */
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Reset buttons */
+@mixin reset-button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+}
+
+
+/* Text replacement */
+@mixin text-replacement($width, $height, $image) {
+    display: block;
+    width: $width;
+    height: $height;
+    background: url($image) center center no-repeat;
+    background-size: contain;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* Visually hide an element */
+@mixin visually-hidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* Transform mixins */
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// transform origin
+@mixin transform-origin($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+// transitions
+@mixin transition($property: all, $time: $transition-duration, $easing: $transition-easing, $delay: 0s) {
+    -webkit-transition: $property $time $delay $easing;
+    transition: $property $time $delay $easing;
+}
+
+
+/* Gradients */
+@mixin linear-gradient-rgba($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
+    background: $startColor; // fallback
+    background: -ms-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // IE 10+
+    background: -moz-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // FF ?+
+    background: linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // W3C
+}
+@mixin linear-gradient($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
+    @include linear-gradient-rgba($direction, $startColor, $stopColor, $startPos, $endPos);
+}

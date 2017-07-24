@@ -1,0 +1,27 @@
+# Locations
+source: ./views
+destination: ./_site
+
+# Reading
+encoding: 'utf-8'
+exclude: [
+    'node_modules',
+    'src',
+    'CHANGELOG.md',
+    'package.json',
+    'README.md',
+    'yarn.locl'
+]
+include: ['.htaccess']
+keep_files: ['assets']
+
+# Outputting
+permalink: /articles/:year/:month/:title/
+
+# Conversion
+kramdown:
+    auto_ids: false
+    hard_wrap: true
+    input: GFM
+    parse_block_html: false
+    parse_span_html: false

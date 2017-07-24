@@ -1,0 +1,59 @@
+{
+    "name": "stabile",
+    "description": "A static site generator powered by Jekyll",
+    "version": "0.0.1",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/donofkarma/stabile.git"
+    },
+    "license" : "MIT",
+    "main": "/",
+    "scripts": {
+        "clean": "rimraf _site",
+
+        "copy:fonts": "mkdir -p ./_site/assets/fonts && cp -r ./src/fonts/ ./_site/assets/fonts/",
+        "copy:images": "mkdir -p ./_site/assets/images && cp -r ./src/images/public/ ./_site/assets/images/",
+        "copy": "npm run copy:fonts && npm run copy:images",
+
+        "build:html": "jekyll build",
+        "build:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/",
+        "build:js": "mkdir -p ./_site/assets/js && ./node_modules/browserify/bin/cmd.js src/js/script.js --standalone CS -o _site/assets/js/script.js -t babelify",
+
+        "prebuild": "npm run clean",
+        "build": "npm run build:html && npm run build:css && npm run build:js",
+        "postbuild": "npm run copy",
+
+        "deploy:css": "./node_modules/.bin/cleancss -o ./_site/assets/css/style.css ./_site/assets/css/style.css",
+
+        "predeploy": "NODE_ENV=production npm run build",
+        "deploy": "npm run deploy:css",
+
+        "watch:html": "jekyll serve",
+        "watch:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/ --watch",
+        "watch:js": "./node_modules/watchify/bin/cmd.js src/js/script.js --standalone CS -o _site/assets/js/script.js -t babelify -v",
+
+        "prewatch": "npm run build",
+        "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
+
+        "start": "yarn install && npm run watch"
+    },
+    "engines": {
+        "node": ">= 6.10.0"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.x",
+        "babel-preset-es2015": "6.24.x",
+        "babel-preset-stage-0": "6.24.x",
+        "babelify": "7.3.x",
+        "browserify": "14.4.x",
+        "clean-css": "4.1.x",
+        "clean-css-cli": "4.1.x",
+        "normalize.css": "7.0.x",
+        "node-sass": "4.5.x",
+        "parallelshell": "3.0.x",
+        "rimraf": "2.6.x",
+        "sass-mq": "3.3.x",
+        "watchify": "3.9.0"
+    }
+}

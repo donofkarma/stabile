@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: $copy;
+    font-family: $BodyCopy;
+    font-size: 0.875rem;  // set to 14px equivalent
+    line-height: 1.4;
+    overflow-y: scroll;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+// hide content from view
+.visually-hidden {
+    @include visually-hidden;
+}
+// hide stuff at breakpoints
+.xs-hidden {
+    @include mq($until: small) {
+        display: none !important;
+    }
+}
+.sm-hidden {
+    @include mq($from: small, $until: medium) {
+        display: none !important;
+    }
+}
+.md-hidden {
+    @include mq($from: medium, $until: large) {
+        display: none !important;
+    }
+}
+.lg-hidden {
+    @include mq($from: large, $until: wide) {
+        display: none !important;
+    }
+}
+.wi-hidden {
+    @include mq($from: wide) {
+        display: none !important;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem;
+    font-family: $HeadingCopy;
+}
+
+ol, ul {
+    margin: 0 0 1.6rem
+}
+
+p {
+    margin: 0 0 1.6rem;
+}
+
+a {
+    border-bottom: 1px solid $grey-light;
+    color: $copy;
+    text-decoration: none;
+    @include transition(border-color);
+
+    &:hover,
+    &:focus {
+        border-color: $copy;
+    }
+
+    img {
+        border: 0;
+    }
+}

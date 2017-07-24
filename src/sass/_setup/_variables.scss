@@ -1,0 +1,39 @@
+/* Breakpoints */
+$extraSmallScreen: 320px;
+$smallScreen: 480px;
+$mediumScreen: 768px;
+$largeScreen: 1024px;
+$wideScreen: 1200px;
+
+
+/* Grid */
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+
+/* Colours */
+// brand
+
+// general
+$black: #000;
+$grey-light: #ccc;
+$grey-medium: #999;
+$grey-dark: #333;
+$red: #ff0000;
+$white: #fff;
+
+// style
+$background: $white;
+$copy: $grey-dark;
+$error-message: $red;
+$placeholder-copy: $grey-medium;
+
+
+/* Animation */
+$transition-duration: 0.25s;
+$transition-easing: ease-out;
+
+
+/* Fonts */
+$BodyCopy: Helvetica, Arial, sans-serif;
+$HeadingCopy: Helvetica, Arial, sans-serif;
