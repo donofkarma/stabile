@@ -3,7 +3,7 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    max-width: $wideScreen;
+    max-width: $wide-screen;
 }
 
 .row {
@@ -35,6 +35,11 @@
         > .col {
             padding: 0;
         }
+    }
+
+    // center align children
+    &--align-center {
+        justify-content: center;
     }
 
     // verically align children

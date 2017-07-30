@@ -10,11 +10,11 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-    extraSmall: $extraSmallScreen,
-    small:      $smallScreen,
-    medium:     $mediumScreen,
-    large:      $largeScreen,
-    wide:       $wideScreen
+    extraSmall: $extra-small-screen,
+    small:      $small-screen,
+    medium:     $medium-screen,
+    large:      $large-screen,
+    wide:       $wide-screen
 );
 
 // Define the breakpoint from the $mq-breakpoints list that should

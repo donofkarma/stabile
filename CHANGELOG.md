@@ -2,4 +2,4 @@
 ---------------------
 
 ### 0.0.1
-- Initial commit of base code.
+- Initial commit of base code

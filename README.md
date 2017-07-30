@@ -5,7 +5,7 @@ A static site site generator powered by Jekyll.
 
 ## Getting started
 
-To use this generator you will need [Node.js](http://nodejs.org/download/) (min v6.10.x) and [Ruby](https://www.ruby-lang.org/en/).
+To use this generator you will need [Node.js](http://nodejs.org/download/) (min v6.10.x), [Ruby](https://www.ruby-lang.org/en/) and [Yarn](https://yarnpkg.com/lang/en/).
 
 ```
 bundle install && npm run start

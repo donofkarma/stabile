@@ -1,9 +1,9 @@
 /* Breakpoints */
-$extraSmallScreen: 320px;
-$smallScreen: 480px;
-$mediumScreen: 768px;
-$largeScreen: 1024px;
-$wideScreen: 1200px;
+$extra-small-screen: 320px;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$wide-screen: 1200px;
 
 
 /* Grid */
@@ -35,5 +35,5 @@ $transition-easing: ease-out;
 
 
 /* Fonts */
-$BodyCopy: Helvetica, Arial, sans-serif;
-$HeadingCopy: Helvetica, Arial, sans-serif;
+$body-copy: Helvetica, Arial, sans-serif;
+$heading-copy: $body-copy;
