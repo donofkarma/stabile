@@ -29,7 +29,7 @@
         "predeploy": "NODE_ENV=production npm run build",
         "deploy": "npm run deploy:css",
 
-        "watch:html": "jekyll serve",
+        "watch:html": "jekyll serve --host 0.0.0.0",
         "watch:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/ --watch",
         "watch:js": "./node_modules/watchify/bin/cmd.js src/js/script.js --standalone CS -o _site/assets/js/script.js -t babelify -v",
 
