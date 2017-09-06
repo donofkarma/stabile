@@ -36,7 +36,7 @@
         "prewatch": "npm run build",
         "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
 
-        "start": "yarn install && npm run watch"
+        "start": "npm install && npm run watch"
     },
     "engines": {
         "node": ">= 6.10.0"

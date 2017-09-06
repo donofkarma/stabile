@@ -5,7 +5,7 @@ A static site powered by [Jekyll](https://jekyllrb.com/).
 
 ## Getting started
 
-You will need [Node.js](http://nodejs.org/download/) (min v6.10.x), [Ruby](https://www.ruby-lang.org/en/), [Bundler](https://bundler.io/) and [Yarn](https://yarnpkg.com/lang/en/).
+You will need [Node.js](http://nodejs.org/download/) (min v6.10.x), [Ruby](https://www.ruby-lang.org/en/), and [Bundler](https://bundler.io/).
 
 Once these have been installed run:
 
