@@ -29,14 +29,14 @@
         "predeploy": "NODE_ENV=production npm run build",
         "deploy": "npm run deploy:css",
 
-        "watch:html": "jekyll serve",
+        "watch:html": "jekyll serve --host 0.0.0.0",
         "watch:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/ --watch",
         "watch:js": "./node_modules/watchify/bin/cmd.js src/js/script.js --standalone CS -o _site/assets/js/script.js -t babelify -v",
 
         "prewatch": "npm run build",
         "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
 
-        "start": "yarn install && npm run watch"
+        "start": "npm install && npm run watch"
     },
     "engines": {
         "node": ">= 6.10.0"
