@@ -12,8 +12,12 @@ exclude: [
     'README.md',
     'yarn.locl'
 ]
-include: ['.htaccess']
-keep_files: ['assets']
+include: [
+    '.htaccess'
+]
+keep_files: [
+    'assets'
+]
 
 # Outputting
 permalink: /articles/:year/:month/:title/
