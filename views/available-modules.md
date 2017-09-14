@@ -5,8 +5,14 @@ page: available-modules
 
 # Available modules
 
-## Test Block
-
 {% test %}
-# This is a test
+    ## Test Block
+
+    Test paragraph content
+
+    {% test %}
+        ## Test Block Nested
+
+        Test paragraph content
+    {% endtest %}
 {% endtest %}

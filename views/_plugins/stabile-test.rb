@@ -8,14 +8,24 @@ module Jekyll
         def render(context)
             contents = super
 
+            site = context.registers[:site]
+            converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
+
+            # remove all multiple space sections
+            # need a better way to detect indentaion
+            # need to avoid removing indentation from code blocks
+            content = contents.gsub(/^\s+/, '')
+
             # pipe param through liquid to make additional replacements possible
-            content = Liquid::Template.parse(contents).render context
+            content = Liquid::Template.parse(content).render context
 
-            #strip out special chars and replace spaces with hyphens
-            # safeContent = content.rstrip.gsub(/[^\w\s]/,'').gsub(/[\s]/,'-')
+            # parse content for markdown
+            content = converter.convert(content)
 
-            output = "<div class=\"module module--test\">"
-            output += content.strip
+            # render
+            output = ''
+            output += "<div class=\"module module--test\">"
+            output += content
             output += "</div>"
 
             output
