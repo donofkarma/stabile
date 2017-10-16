@@ -31,7 +31,7 @@ The site uses standard Jekyll conventions for templates (markdown) and wrappers 
 
 CSS is created using [SASS](http://sass-lang.com/) but compiled via the `node-sass` module as this is quicker than using the usual Ruby implementation.
 
-The Javascript can be found in `./views/_includes/_global/document_foot.html`. There is so little on this site that it's more efficient to add it this way than to wrap it in a transpile/bundle process.
+Finally the JS is transipled using Babel so ES6/7 is definitely recommended.
 
 
 ### HTML Compression
