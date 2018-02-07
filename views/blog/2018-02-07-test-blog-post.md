@@ -1,5 +1,5 @@
 ---
-title: Test blog post renamed
+title: This is a blog post!
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae tincidunt lorem. Phasellus imperdiet, lacus tempus sodales congue, magna erat mattis ex, non pulvinar elit turpis vitae lacus. Vestibulum laoreet sagittis libero ut porttitor. Morbi nibh metus, interdum at dui sed, porttitor fermentum odio. In ornare eu est sit amet eleifend. Vestibulum convallis metus ac ligula commodo, id pulvinar eros euismod. Pellentesque lobortis finibus ipsum sit amet viverra. Nam eleifend aliquet volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis facilisis sem in faucibus aliquam.
 
