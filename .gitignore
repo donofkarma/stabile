@@ -29,5 +29,7 @@ Thumbs.db
 
 # Project files #
 #################
+.bundle/
 _site/
 node_modules/
+vendor/

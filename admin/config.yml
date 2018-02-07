@@ -1,0 +1,19 @@
+backend:
+    name: gitub
+    repo: donofkarma/stabile
+    branch: feature/netlify
+
+extension: md
+
+media_folder: src/images/public/uploads
+public_folder: /assets/images/uploads
+
+collections:
+    - name: posts
+      label: Posts
+      folder: views/blog/
+      create: true,
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+      fields:
+        - { label: "Title", name: "title" }
+        - { label: "Body", name: "body", widget: "markdown"}
