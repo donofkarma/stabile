@@ -49,5 +49,8 @@
         "husky": "^0.14.3",
         "lint-staged": "^6.1.0",
         "prettier": "^1.10.2"
+    },
+    "lint-staged": {
+        "*.{js,jsx}": ["prettier --config .prettierrc.json --write", "git add"]
     }
 }
