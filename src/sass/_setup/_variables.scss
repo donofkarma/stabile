@@ -5,11 +5,9 @@ $medium-screen: 768px;
 $large-screen: 1024px;
 $wide-screen: 1200px;
 
-
 /* Grid */
 $grid-columns: 12;
-$grid-gutter-width: 30px;
-
+$grid-gutter-width: 20px;
 
 /* Colours */
 // brand
@@ -28,11 +26,9 @@ $copy: $grey-dark;
 $error-message: $red;
 $placeholder-copy: $grey-medium;
 
-
 /* Animation */
 $transition-duration: 0.25s;
 $transition-easing: ease-out;
-
 
 /* Fonts */
 $body-copy: Helvetica, Arial, sans-serif;
