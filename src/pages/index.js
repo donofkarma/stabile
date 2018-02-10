@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 
 const IndexPage = () => (
     <article>
@@ -22,6 +23,11 @@ const IndexPage = () => (
         <code>
             <pre>npm run start</pre>
         </code>
+
+        <p>
+            Pages can be written as React Components or in{" "}
+            <Link to="/markdown-example">Markdown files</Link>.
+        </p>
 
         <h2>Bundling for deployment</h2>
 

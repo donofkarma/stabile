@@ -18,18 +18,16 @@
     }
 }
 
-
 /* Font face */
 @mixin font-face($name, $filename) {
     @font-face {
         font-family: $name;
-        src: url('/assets/fonts/#{$filename}.woff2') format('woff2'),
-             url('/assets/fonts/#{$filename}.woff') format('woff');
+        src: url("/assets/fonts/#{$filename}.woff2") format("woff2"),
+            url("/assets/fonts/#{$filename}.woff") format("woff");
         font-weight: normal;
         font-style: normal;
     }
 }
-
 
 /* Float container collapse fix */
 @mixin clearfix {
@@ -44,14 +42,12 @@
     }
 }
 
-
 /* Reset lists */
 @mixin reset-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 
 /* Reset buttons */
 @mixin reset-button {
@@ -61,7 +57,6 @@
     border: 0;
     outline: 0;
 }
-
 
 /* Text replacement */
 @mixin text-replacement($width, $height, $image) {
@@ -75,7 +70,6 @@
     overflow: hidden;
 }
 
-
 /* Visually hide an element */
 @mixin visually-hidden {
     position: absolute;
@@ -87,7 +81,6 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
 
 /* Transform mixins */
 // generic transform
@@ -134,13 +127,24 @@
     transition: $property $time $delay $easing;
 }
 
-
 /* Gradients */
 @mixin linear-gradient-rgba($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
     background: $startColor; // fallback
-    background: -ms-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // IE 10+
-    background: -moz-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // FF ?+
-    background: linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // W3C
+    background: -ms-linear-gradient(
+        $direction,
+        $startColor $startPos,
+        $stopColor $endPos
+    ); // IE 10+
+    background: -moz-linear-gradient(
+        $direction,
+        $startColor $startPos,
+        $stopColor $endPos
+    ); // FF ?+
+    background: linear-gradient(
+        $direction,
+        $startColor $startPos,
+        $stopColor $endPos
+    ); // W3C
 }
 @mixin linear-gradient($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
     @include linear-gradient-rgba($direction, $startColor, $stopColor, $startPos, $endPos);

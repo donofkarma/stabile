@@ -51,6 +51,9 @@
         "prettier": "^1.10.2"
     },
     "lint-staged": {
-        "*.{js,jsx}": ["prettier --config .prettierrc.json --write", "git add"]
+        "*.{js,jsx}": [
+            "prettier --config .prettierrc.json --write",
+            "git add"
+        ]
     }
 }

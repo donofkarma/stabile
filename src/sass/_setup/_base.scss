@@ -9,14 +9,13 @@ html {
 body {
     color: $copy;
     font-family: $body-copy;
-    font-size: 0.875rem;  // set to 14px equivalent
+    font-size: 0.875rem; // set to 14px equivalent
     line-height: 1.4;
     overflow-y: scroll;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-font-smoothing: antialiased;
 }
-
 
 // hide content from view
 .visually-hidden {
@@ -49,13 +48,19 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 1rem;
     font-family: $heading-copy;
 }
 
-ol, ul {
-    margin: 0 0 1.6rem
+ol,
+ul {
+    margin: 0 0 1.6rem;
 }
 
 p {
@@ -76,4 +81,8 @@ a {
     img {
         border: 0;
     }
+}
+
+hr {
+    margin: $grid-gutter-width*2 0;
 }
