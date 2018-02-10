@@ -4,6 +4,9 @@
         "node": true
     },
     "extends": ["fbjs", "eslint:recommended", "prettier"],
+    "globals": {
+        "graphql": true
+    },
     "plugins": ["prettier", "react"],
     "parser": "babel-eslint",
     "parserOptions": {
