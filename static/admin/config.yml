@@ -1,0 +1,9 @@
+backend:
+    name: github
+    repo: donofkarma/stabile
+    branch: feature/gatsbyjs
+
+publish_mode: editorial_workflow
+
+media_folder: "static/assets/images/uploads"
+public_folder: "/assets/images/uploads"
