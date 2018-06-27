@@ -14,7 +14,8 @@
 
         "copy:fonts": "mkdir -p ./_site/assets/fonts && cp -r ./src/fonts/ ./_site/assets/fonts/",
         "copy:images": "mkdir -p ./_site/assets/images && cp -r ./src/images/public/ ./_site/assets/images/",
-        "copy": "npm run copy:fonts && npm run copy:images",
+        "copy:scripts": "mkdir -p ./_site/assets/js/vendor && cp -r ./src/js/vendor/ ./_site/assets/js/vendor",
+        "copy": "npm run copy:fonts && npm run copy:images && npm run copy:scripts",
 
         "build:html": "jekyll build",
         "build:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/",

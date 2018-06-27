@@ -29,5 +29,6 @@ Thumbs.db
 
 # Project files #
 #################
+.cache/
 _site/
 node_modules/
