@@ -6,18 +6,18 @@ This is intended as a quick reference and showcase. For more complete info, see 
 
 ### Table of Contents
 
-[Headers](#headers)
-[Emphasis](#emphasis)
-[Lists](#lists)
-[Links](#links)
-[Images](#images)
-[Code and Syntax Highlighting](#code)
-[Tables](#tables)
-[Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
+1. [Headers](#headers)
+1. [Emphasis](#emphasis)
+1. [Lists](#lists)
+1. [Links](#links)
+1. [Images](#images)
+1. [Code and Syntax Highlighting](#code)
+1. [Tables](#tables)
+1. [Blockquotes](#blockquotes)
+1. [Inline HTML](#html)
+1. [Horizontal Rule](#hr)
+1. [Line Breaks](#lines)
+1. [YouTube Videos](#videos)
 
 <a name="headers"></a>
 

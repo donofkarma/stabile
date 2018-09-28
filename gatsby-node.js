@@ -30,42 +30,34 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
+  const MarkdownPageTemplate = path.resolve("src/templates/markdown-page.js");
 
-  return new Promise((resolve, reject) => {
-    const MarkdownPageTemplate = path.resolve("src/templates/markdown-page.js");
-
-    resolve(
-      graphql(`
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-                html
-              }
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
             }
+            frontmatter {
+              title
+            }
+            html
           }
         }
-      `).then(result => {
-        if (result.errors) {
-          reject(result.errors);
-        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors);
+    }
 
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          createPage({
-            path: node.fields.slug,
-            component: MarkdownPageTemplate
-          });
-        });
-
-        // suppresses promise warning but still creates pages
-        return null;
-      })
-    );
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: MarkdownPageTemplate
+      });
+    });
   });
 };
