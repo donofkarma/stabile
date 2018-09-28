@@ -4,9 +4,6 @@
         "node": true
     },
     "extends": ["fbjs", "eslint:recommended", "prettier"],
-    "globals": {
-        "graphql": true
-    },
     "plugins": ["prettier", "react"],
     "parser": "babel-eslint",
     "parserOptions": {
@@ -21,6 +18,6 @@
     },
     "rules": {
         "prettier/prettier": "error",
-        "relay/graphql-naming": 0
+        "relay/graphql-syntax": "off"
     }
 }

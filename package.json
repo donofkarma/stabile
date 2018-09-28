@@ -1,59 +1,62 @@
 {
-    "name": "stabile",
-    "description": "A static site generator powered by Jekyll",
-    "version": "1.0.0-rc3",
-    "author": "Jasal Vadgama (https://blacklabelcreative.com/)",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/donofkarma/stabile.git"
-    },
-    "license": "MIT",
-    "main": "n/a",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop -H 0.0.0.0",
-        "format": "prettier --config .prettierrc.json --write \"src/**/*.js\"",
-        "precommit": "lint-staged",
-        "prepush": "npm run test",
-        "test": "eslint .",
-        "start": "npm install && gatsby develop"
-    },
-    "engines": {
-        "node": ">= 8.9.4"
-    },
-    "dependencies": {
-        "gatsby": "^1.9.192",
-        "gatsby-link": "^1.6.36",
-        "gatsby-plugin-netlify": "^1.0.17",
-        "gatsby-plugin-netlify-cms": "^1.0.6",
-        "gatsby-plugin-react-helmet": "^2.0.4",
-        "gatsby-plugin-react-next": "^1.0.8",
-        "gatsby-plugin-sass": "^1.0.16",
-        "gatsby-source-filesystem": "^1.5.18",
-        "gatsby-transformer-remark": "^1.7.31",
-        "normalize.css": "^8.0.0",
-        "react-helmet": "^5.2.0",
-        "sass-mq": "4.0.x"
-    },
-    "devDependencies": {
-        "babel-eslint": "^8.2.1",
-        "eslint": "^4.17.0",
-        "eslint-config-fbjs": "^2.0.1",
-        "eslint-config-prettier": "^2.9.0",
-        "eslint-plugin-babel": "^4.1.2",
-        "eslint-plugin-flowtype": "^2.43.0",
-        "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-prettier": "^2.6.0",
-        "eslint-plugin-react": "^7.6.1",
-        "eslint-plugin-relay": "^0.0.21",
-        "husky": "^0.14.3",
-        "lint-staged": "^6.1.0",
-        "prettier": "^1.10.2"
-    },
-    "lint-staged": {
-        "*.{js,jsx}": [
-            "prettier --config .prettierrc.json --write",
-            "git add"
-        ]
-    }
+  "name": "stabile",
+  "description": "A static site generator powered by Jekyll",
+  "version": "1.0.0-rc3",
+  "author": "Jasal Vadgama (https://blacklabelcreative.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donofkarma/stabile.git"
+  },
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format": "prettier --config .prettierrc.json --write \"src/**/*.js\"",
+    "precommit": "lint-staged",
+    "prepush": "npm run test",
+    "test": "eslint .",
+    "start": "gatsby develop"
+  },
+  "engines": {
+    "node": ">= 8.12.0"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.11",
+    "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-netlify-cms": "^3.0.3",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.4",
+    "netlify-cms": "^2.1.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.0",
+    "eslint-config-fbjs": "^2.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-relay": "^0.0.28",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0",
+    "prettier": "^1.14.3",
+    "sass-mq": "5.0.x",
+    "webpack": "^4.20.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --config .prettierrc.json --write",
+      "git add"
+    ]
+  }
 }
